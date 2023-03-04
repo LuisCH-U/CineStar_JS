@@ -1,9 +1,9 @@
 const getCines = async () => {
-    const data = await fetch(`http://localhost/cinestar_sweb/cines`);
+    const data = await fetch(`http://localhost/cinestar_sweb/cines/1`);
     if ( data.status === 200 ) {
         const cine = await data.json();
         let html = `<h2>Cine Excelsior</h2>`;
-        cine.forEach(cine => {
+        
             html += `
             <div class="cine-info">
 					<div class="cine-info datos">
@@ -12,12 +12,12 @@ const getCines = async () => {
 						<br>
 						<div class="tabla">
 							<div class="fila">
-								<div class="celda-titulo">${cine.DiasSemana}</div>
-								<div class="celda">${cine.Precio}</div>
+								<div class="celda-titulo">Lunes y Miércoles</div>
+								<div class="celda">S/. 4.0</div>
 							</div>
 							<div class="fila impar">
-								<div class="celda-titulo">${cine.DiasSemana}</div>
-								<div class="celda">${cine.Precio}</div>
+								<div class="celda-titulo">Martes</div>
+								<div class="celda">S/. 3.50</div>
 							</div>
 							<div class="fila">
 								<div class="celda-titulo">Jueves y Viernes</div>
@@ -89,11 +89,10 @@ const getCines = async () => {
 			</div>
                   
             `
-        });
+        
         document.getElementById('contenido-interno').innerHTML = html;
     }
 }
 
 
 getCines()
-
