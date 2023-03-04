@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Open index.html",
+            "file": "d:\\Ciclo 4-Bloque 2\\LENG DE PROG - JAVA WEB  4R PRC  3118-2452\\Semana 1\\cinestar\\index.html"
+        }
+    ]
+}
